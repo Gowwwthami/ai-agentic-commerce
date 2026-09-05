@@ -44,7 +44,6 @@ def create_order(
         "amount": paise,
         "currency": "INR",
         "receipt": receipt[:40],
-        "payment_capture": 1,
         "notes": notes or {},
     }
     try:

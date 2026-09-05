@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useSession } from "../contexts/SessionContext";
 import { api, ApiError } from "../api/client";
 import { OrderSummary } from "../components/OrderSummary";
@@ -59,6 +59,46 @@ export function CheckoutPage() {
   const [paymentBusy, setPaymentBusy] = useState(false);
   const [checkoutStarted, setCheckoutStarted] = useState(false);
   const [error, setError] = useState("");
+
+  // Never show or pay an order whose snapshot no longer matches the cart.
+  // This can happen when the user changes the cart after an older checkout
+  // order was saved in the session. The next explicit checkout action will
+  // create/snapshot an order from the current cart on the backend.
+  useEffect(() => {
+    if (!cart?.items?.length || !order?.items) return;
+
+    const normalizeItems = (items) =>
+      items
+        .map((item) => ({
+          product_id: Number(item.product_id),
+          quantity: Number(item.quantity),
+          unit_price: Number(item.unit_price),
+        }))
+        .sort((a, b) => a.product_id - b.product_id);
+
+    const cartItems = normalizeItems(cart.items);
+    const orderItems = normalizeItems(order.items);
+    const itemsMatch =
+      cartItems.length === orderItems.length &&
+      cartItems.every(
+        (item, index) =>
+          item.product_id === orderItems[index].product_id &&
+          item.quantity === orderItems[index].quantity &&
+          item.unit_price === orderItems[index].unit_price,
+      );
+    const totalMatches =
+      Math.round(Number(cart.total) * 100) ===
+      Math.round(Number(order.total_amount) * 100);
+
+    if (!itemsMatch || !totalMatches) {
+      setOrder(null);
+      setPayment(null);
+      setCheckoutStarted(false);
+      setError(
+        "Your cart changed since the previous checkout. Please review the current cart before paying.",
+      );
+    }
+  }, [cart, order, setOrder, setPayment]);
 
   const openRazorpayCheckout = useCallback(async (currentOrder) => {
     if (!currentOrder) return;

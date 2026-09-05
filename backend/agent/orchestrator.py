@@ -687,8 +687,14 @@ def _create_razorpay_order(db, session, order) -> dict:
     try:
         created = create_order(
             float(order.total_amount),
-            receipt=f"gc-{session.id[:8]}-{order.id}",
-            notes={"session_id": session.id, "order_id": str(order.id)},
+            receipt=(
+                f"gc-{session.id[:8]}-{order.id}-a{(order.payment_attempts or 0) + 1}"
+            ),
+            notes={
+                "session_id": session.id,
+                "order_id": str(order.id),
+                "attempt": str((order.payment_attempts or 0) + 1),
+            },
         )
     except (RazorpayUnavailable, ValueError) as exc:
         write_audit_event(

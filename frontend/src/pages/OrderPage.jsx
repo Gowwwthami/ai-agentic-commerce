@@ -79,7 +79,10 @@ export function OrderPage({ orderId: _orderId }) {
 
       const razorpay = new window.Razorpay(options);
 
+      let failureReported = false;
       razorpay.on("payment.failed", async () => {
+        if (failureReported) return;
+        failureReported = true;
         try {
           const result = await api.reportPaymentFailed(sessionId);
           setOrder(result.order ?? null);
