@@ -1,0 +1,201 @@
+﻿
+========== backend/__pycache__/models.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+varnames: ()
+strs: ['Product', 'Review']
+nums: [0]
+names: ('sqlalchemy', 'String', 'Text', 'Numeric', 'Integer', 'Boolean', 'sqlalchemy.orm', 'Mapped', 'mapped_column', 'database', 'Base', 'Product', 'Review')
+
+##### <module>.Product #####
+args: ()
+varnames: ()
+strs: ['Product', 'products', 'INR', 'GlowCart']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__tablename__', 'mapped_column', 'id', 'String', 'asin', 'name', 'brand', 'category', 'Text', 'description', 'Numeric', 'price', 'currency', 'rating', 'Integer', 'review_count', 'image_url', 'inventory', 'merchant', 'Boolean', 'available', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.Product.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['id', 'asin', 'name', 'brand', 'category', 'description', 'price', 'currency', 'rating', 'review_count', 'image_url', 'inventory', 'merchant', 'available']
+nums: [2]
+names: ('Mapped', 'int', 'str', 'float', 'bool')
+
+##### <module>.Review #####
+args: ()
+varnames: ()
+strs: ['Review', 'reviews']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__tablename__', 'mapped_column', 'id', 'String', 'asin', 'Numeric', 'rating', 'Text', 'review_text', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.Review.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['id', 'asin', 'rating', 'review_text']
+nums: [2]
+names: ('Mapped', 'int', 'str', 'float')
+
+========== backend/__pycache__/schemas.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+varnames: ()
+strs: ['ChatRequest', 'CartAddRequest', 'CartUpdateRequest', 'SessionRequest', 'CheckoutConfirmRequest', 'PaymentVerifyRequest', 'PaymentActionRequest']
+nums: [0]
+names: ('pydantic', 'BaseModel', 'Field', 'ChatRequest', 'CartAddRequest', 'CartUpdateRequest', 'SessionRequest', 'CheckoutConfirmRequest', 'PaymentVerifyRequest', 'PaymentActionRequest')
+
+##### <module>.ChatRequest #####
+args: ()
+varnames: ()
+strs: ['ChatRequest']
+nums: [2000]
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', 'Field', 'session_id', 'message', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.ChatRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id', 'message']
+nums: [2]
+names: ('str',)
+
+##### <module>.CartAddRequest #####
+args: ()
+varnames: ()
+strs: ['CartAddRequest']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', 'Field', 'quantity', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.CartAddRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id', 'product_id', 'quantity']
+nums: [2]
+names: ('str', 'int')
+
+##### <module>.CartUpdateRequest #####
+args: ()
+varnames: ()
+strs: ['CartUpdateRequest']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', 'Field', 'quantity', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.CartUpdateRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id', 'quantity']
+nums: [2]
+names: ('str', 'int')
+
+##### <module>.SessionRequest #####
+args: ()
+varnames: ()
+strs: ['SessionRequest']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.SessionRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id']
+nums: [2]
+names: ('str',)
+
+##### <module>.CheckoutConfirmRequest #####
+args: ()
+varnames: ()
+strs: ['CheckoutConfirmRequest']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', 'confirm', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.CheckoutConfirmRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id', 'confirm']
+nums: [2]
+names: ('str', 'bool')
+
+##### <module>.PaymentVerifyRequest #####
+args: ()
+varnames: ()
+strs: ['PaymentVerifyRequest']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.PaymentVerifyRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id', 'razorpay_order_id', 'razorpay_payment_id', 'razorpay_signature']
+nums: [2]
+names: ('str',)
+
+##### <module>.PaymentActionRequest #####
+args: ()
+varnames: ()
+strs: ['PaymentActionRequest']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.PaymentActionRequest.__annotate__ #####
+args: ('format',)
+varnames: ('format',)
+strs: ['session_id']
+nums: [2]
+names: ('str',)
+
+========== backend/__pycache__/deps.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+varnames: ()
+strs: []
+nums: [0]
+names: ('database', 'SessionLocal', 'get_db')
+
+##### <module>.get_db #####
+args: ()
+varnames: ('db',)
+strs: []
+nums: []
+names: ('SessionLocal', 'close')
+
+========== backend/__pycache__/config.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+varnames: ()
+strs: ['DATABASE_URL', 'LLM_API_KEY', 'GEMINI_MODEL', 'gemini-3.5-flash-lite', 'RAZORPAY_KEY_ID', 'RAZORPAY_KEY_SECRET']
+nums: [0]
+names: ('os', 'dotenv', 'load_dotenv', 'getenv', 'DATABASE_URL', 'LLM_API_KEY', 'GEMINI_MODEL', 'RAZORPAY_KEY_ID', 'RAZORPAY_KEY_SECRET', 'MAX_PAYMENT_ATTEMPTS')
+
+========== backend/__pycache__/main.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+varnames: ()
+strs: ['AI Agentic Commerce', '1.0.0', 'AI-powered shopping agent with recommendations, review intelligence, and bounded checkout.', 'http://localhost:5173', '*', '/']
+nums: [0]
+names: ('fastapi', 'FastAPI', 'fastapi.middleware.cors', 'CORSMiddleware', 'routes', 'router', 'app', 'add_middleware', 'include_router', 'get', 'root')
+
+##### <module>.root #####
+args: ()
+varnames: ()
+strs: ['message', 'AI Agentic Commerce backend is running']
+nums: []
+names: ()
+
+========== backend/__pycache__/database.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+varnames: ()
+strs: ['DATABASE_URL', 'DATABASE_URL is not set', 'Base']
+nums: [0]
+names: ('os', 'dotenv', 'load_dotenv', 'sqlalchemy', 'create_engine', 'sqlalchemy.orm', 'sessionmaker', 'DeclarativeBase', 'getenv', 'DATABASE_URL', 'RuntimeError', 'engine', 'SessionLocal', 'Base')
+
+##### <module>.Base #####
+args: ()
+varnames: ()
+strs: ['Base']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__static_attributes__')

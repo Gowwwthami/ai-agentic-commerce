@@ -1,0 +1,1412 @@
+﻿
+========== backend/agent/__pycache__/gemini_client.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('json', 'logging', 're', 'config', 'GEMINI_MODEL', 'LLM_API_KEY', 'getLogger', '__name__', 'logger', 'gemini_available', 'generate_json', 'generate_text')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('bool',)
+
+##### <module>.gemini_available #####
+args: ()
+locals: ()
+strs: []
+nums: []
+names: ('bool', 'LLM_API_KEY')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['prompt', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>.generate_json #####
+args: ('prompt',)
+locals: ('prompt', 'text', 'match')
+strs: ['\\{.*\\}']
+nums: []
+names: ('generate_text', 'json', 'loads', 'JSONDecodeError', 're', 'search', 'DOTALL', 'group')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['prompt', 'json_mode', 'return']
+nums: [2]
+names: ('str', 'bool')
+
+##### <module>.generate_text #####
+args: ('prompt', 'json_mode')
+locals: ('prompt', 'json_mode', 'genai', 'types', 'client', 'config_kwargs', 'response')
+strs: ['temperature', 'application/json', 'response_mime_type', '', 'Gemini request failed']
+nums: [0.2]
+names: ('LLM_API_KEY', 'google', 'genai', 'google.genai', 'types', 'Client', 'models', 'generate_content', 'GEMINI_MODEL', 'GenerateContentConfig', 'text', 'strip', 'Exception', 'logger', 'exception')
+
+========== backend/agent/__pycache__/intent.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: ['first', '1st', 'second', '2nd', 'third', '3rd', 'ParsedIntent']
+nums: [0]
+names: ('re', 'dataclasses', 'asdict', 'dataclass', 'ORDINAL_MAP', 'ParsedIntent', 'to_dict', 'parse_price', 'parse_fast_intent', 'parse_search_intent', '_search_intent', '_ordinal')
+
+##### <module>.ParsedIntent #####
+args: ()
+locals: ()
+strs: ['ParsedIntent', 'rules']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', 'query', 'max_price', 'min_rating', 'brand', 'product_index', 'use_recommended', 'quantity', 'source', '__annotate_func__', '__static_attributes__', '__classdictcell__')
+
+##### <module>.ParsedIntent.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['name', 'query', 'max_price', 'min_rating', 'brand', 'product_index', 'use_recommended', 'quantity', 'source']
+nums: [2]
+names: ('str', 'float', 'int', 'bool')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['intent', 'return']
+nums: [2]
+names: ('ParsedIntent', 'dict')
+
+##### <module>.to_dict #####
+args: ('intent',)
+locals: ('intent',)
+strs: []
+nums: []
+names: ('asdict',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['text', 'return']
+nums: [2]
+names: ('str', 'float')
+
+##### <module>.parse_price #####
+args: ('text',)
+locals: ('text', 'patterns', 'lowered', 'pattern', 'match')
+strs: ['(?:under|below|less than|upto|up to|max(?:imum)?)\\s*Γé╣?\\s*([0-9]{2,6})', ',', '']
+nums: []
+names: ('lower', 'replace', 're', 'search', 'float', 'group')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['message', 'return']
+nums: [2]
+names: ('str', 'ParsedIntent')
+
+##### <module>.parse_fast_intent #####
+args: ('message',)
+locals: ('message', 'text', 'lowered', 'intent')
+strs: ['\\b(retry|try again|pay again)\\b', 'retry_payment', 'payment link|another payment|other (?:payment )?method|upi link', 'payment_link', "payment failed|didn'?t go through|payment did not", 'payment_failed', '\\b(audit|what happened|show (?:the )?log)\\b', 'show_audit', 'proceed to checkout|go to checkout|\\bcheckout\\b|place order', 'start_checkout', '\\bbuy (?:it|now|this)\\b', 'buy_it', '^(yes|yep|yeah|confirm|go ahead|place (?:the )?order|pay now)[.! ]*$', 'confirm_checkout', "\\b(show(?: me)?(?: my)? cart|view cart|what'?s in (?:my )?cart)\\b", 'get_cart', '\\bremove\\b', 'remove_from_cart', '\\bcompare\\b', 'compare', 'best reviews|better reviews|which (?:one )?is better|long-?lasting', 'compare_best', '\\badd\\b|\\bcart\\b', 'add_to_cart', 'recommended', 'the one you', 'lipstick|recommend|highly rated|good reviews|under|show me']
+nums: []
+names: ('strip', 'lower', 're', 'search', 'ParsedIntent', '_ordinal', 'use_recommended', 'product_index', '_search_intent')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['message', 'return']
+nums: [2]
+names: ('str', 'ParsedIntent')
+
+##### <module>.parse_search_intent #####
+args: ('message',)
+locals: ('message',)
+strs: []
+nums: []
+names: ('_search_intent', 'lower')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['text', 'lowered', 'return']
+nums: [2]
+names: ('str', 'ParsedIntent')
+
+##### <module>._search_intent #####
+args: ('text', 'lowered')
+locals: ('text', 'lowered', 'intent', 'brands', 'brand')
+strs: ['search', 'lipstick', 'highly rated|good reviews|best reviews|well reviewed', 'e.l.f.']
+nums: [3.8]
+names: ('ParsedIntent', 'parse_price', 'max_price', 're', 'search', 'min_rating', 'brand')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['lowered', 'return']
+nums: [2]
+names: ('str', 'int')
+
+##### <module>._ordinal #####
+args: ('lowered',)
+locals: ('lowered', 'word', 'index')
+strs: ['\\b']
+nums: []
+names: ('ORDINAL_MAP', 'items', 're', 'search')
+
+========== backend/agent/__pycache__/orchestrator.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('json', 'logging', 'fastapi', 'HTTPException', 'agent.gemini_client', 'generate_json', 'generate_text', 'gemini_available', 'agent.intent', 'ParsedIntent', 'parse_fast_intent', 'parse_search_intent', 'to_dict', 'models', 'Product', 'services.audit_service', 'list_audit_events', 'write_audit_event', 'services.cart_service', 'add_to_cart', 'get_cart', 'remove_from_cart', 'services.catalog_service', 'search_catalog', 'services.order_service', 'can_retry', 'get_active_order', 'mark_failed', 'order_to_dict', 'snapshot_cart_into_order', 'transition', 'services.recommend_service', 'compare_payloads', 'rank_products', 'services.razorpay_service', 'RazorpayUnavailable', 'create_order', 'create_payment_link', 'public_key_id', 'services.session_service', 'append_message', 'get_or_create_session', 'last_product_ids', 'set_last_products', 'getLogger', '__name__', 'logger', 'handle_chat', '_error_payload', '_dispatch', '_gemini_intent', '_products_from_ids', '_do_search', '_explain_recommendations', '_do_compare', '_explain_comparison', '_do_compare_best', '_resolve_product_id', '_do_add', '_do_remove', '_do_cart', '_do_start_checkout', '_do_confirm_checkout', '_create_razorpay_order', '_do_payment_failed', '_do_retry', '_do_payment_link', '_do_audit', '_payment_view', '_wrap')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'message', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>.handle_chat #####
+args: ('db', 'session_id', 'message')
+locals: ('db', 'session_id', 'message', 'session', 'intent', 'result', 'exc', 'assistant_text')
+strs: ['user', 'user_shopping_request', 'User said: ', 'gemini', 'That action could not be completed.', 'Chat dispatch failed', 'Something went wrong while handling that request. No payment was taken.', 'message', '', 'assistant', 'session_id', 'actions']
+nums: []
+names: ('get_or_create_session', 'append_message', 'write_audit_event', 'id', 'parse_fast_intent', '_gemini_intent', 'parse_search_intent', 'source', '_dispatch', 'HTTPException', '_error_payload', 'isinstance', 'detail', 'str', 'Exception', 'logger', 'exception', 'get', 'setdefault')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'message', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>._error_payload #####
+args: ('db', 'session_id', 'message')
+locals: ('db', 'session_id', 'message')
+strs: ['message', 'products', 'cart', 'order', 'payment', 'comparison', 'audit', 'needs_confirmation', 'actions']
+nums: []
+names: ('get_cart', 'order_to_dict', 'get_active_order', '_payment_view', 'list_audit_events')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['intent', 'raw_message', 'return']
+nums: [2]
+names: ('ParsedIntent', 'str', 'dict')
+
+##### <module>._dispatch #####
+args: ('db', 'session', 'intent', 'raw_message')
+locals: ('db', 'session', 'intent', 'raw_message', 'name', 'added', 'checkout')
+strs: ['search', 'compare', 'compare_best', 'add_to_cart', 'buy_it', 'message', ' ', 'start_checkout', 'actions', 'get_cart', 'Here is your cart. Totals are calculated by the application, not the model.', 'remove_from_cart', 'confirm_checkout', 'payment_failed', 'retry_payment', 'payment_link', 'show_audit']
+nums: []
+names: ('name', '_do_search', '_do_compare', '_do_compare_best', '_do_add', 'ParsedIntent', '_do_start_checkout', '_do_cart', '_do_remove', '_do_confirm_checkout', '_do_payment_failed', '_do_retry', '_do_payment_link', '_do_audit', 'parse_search_intent')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['message', 'return']
+nums: [2]
+names: ('str', 'ParsedIntent')
+
+##### <module>._gemini_intent #####
+args: ('message',)
+locals: ('message', 'prompt', 'data')
+strs: ['\nExtract shopping intent as JSON for a lipstick catalog assistant.\nAllowed intent names: search, compare, compare_best, add_to_cart, get_cart,\nremove_from_cart, start_checkout, confirm_checkout, payment_failed,\nretry_payment, payment_link, show_audit.\n\nSchema:\n{\n  "name": "search",\n  "query": "lipstick",\n  "max_price": 1000,\n  "min_rating": 3.8,\n  "brand": null,\n  "product_index": null,\n  "use_recommended": false\n}\n\nRules:\n- max_price is a number or null.\n- product_index is 0 for first, 1 for second, 2 for third, else null.\n- Do not invent products.\n\nUser message: ', '\n', 'name', 'query', 'max_price', 'min_rating', 'brand', 'product_index', 'use_recommended', 'gemini']
+nums: []
+names: ('gemini_available', 'generate_json', 'get', 'ParsedIntent', 'str', 'float', 'bool')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['ids', 'constraints', 'return']
+nums: [2]
+names: ('list', 'int', 'dict')
+
+##### <module>._products_from_ids #####
+args: ('db', 'ids', 'constraints')
+locals: ('db', 'ids', 'constraints', 'products', 'pid', 'product')
+strs: []
+nums: []
+names: ('get', 'Product', 'append', 'rank_products', 'len')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['intent', 'return']
+nums: [2]
+names: ('ParsedIntent', 'dict')
+
+##### <module>._do_search #####
+args: ('db', 'session', 'intent')
+locals: ('db', 'session', 'intent', 'query', 'result', 'products', 'message', 'item')
+strs: ['lipstick', 'products', 'product_search', "Searched catalog for '", "' with max_price=", ', min_rating=', '.', 'I searched the GlowCart lipstick catalog and did not find a match for those constraints. Try a higher budget or drop the rating filter.', 'search', 'id', 'recommendation_generated', 'Ranked ', ' products. Top pick: ', 'name', 'product_ids', 'constraints', 'recommend']
+nums: []
+names: ('query', 'search_catalog', 'max_price', 'min_rating', 'brand', 'write_audit_event', 'id', 'to_dict', 'set_last_products', '_wrap', 'len', '_explain_recommendations')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['products', 'constraints', 'return']
+nums: [2]
+names: ('list', 'dict', 'str')
+
+##### <module>._explain_recommendations #####
+args: ('products', 'constraints')
+locals: ('products', 'constraints', 'fallback_lines', 'index', 'product', 'fallback', 'compact', 'sample', 'prompt', 'text')
+strs: ['I searched the live catalog (not the model) and ranked three options using rating, review volume, price fit, stock, and sampled stored reviews.', 'Prices are DEMO/SYNTHETIC merchant INR amounts. Review quotes come from the stored Amazon All Beauty review set, not live web reviews.', '. ', 'name', ' ΓÇö Γé╣', 'price', '.0f', ', rating ', 'rating', ', ', 'review_count', ' reviews. ', 'why', 'pros', '   Pros from stored reviews: ', 'cons', '   Cons from stored reviews: ', '\n', 'brand', 'excerpts', 'review_evidence', 'samples', 'text', '\nYou are GlowCart, a careful shopping agent. Write a concise recommendation for the user.\nUse ONLY the JSON evidence. Do not invent products, prices, ratings, or review claims.\nMention that prices are synthetic demo INR pricing and reviews are stored dataset evidence.\nRecommend at most these products. 180-280 words. No markdown headings.\n\nConstraints: ', '\nProducts: ']
+nums: []
+names: ('enumerate', 'append', 'get', 'join', 'gemini_available', 'json', 'dumps', 'generate_text')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['indexes', 'return']
+nums: [2]
+names: ('list', 'int', 'dict')
+
+##### <module>._do_compare #####
+args: ('db', 'session', 'indexes')
+locals: ('db', 'session', 'indexes', 'ids', 'selected_ids', 'index', 'payloads', 'comparison', 'message')
+strs: ['I need two products to compare. Ask me to find lipsticks first.', 'compare_blocked', 'I could not load those two products for comparison.', 'recommended_id', 'product_compared', 'Compared ', 'name', ' vs ', '. Recommended ', 'recommended_name', '.', 'ids', 'compare']
+nums: [2]
+names: ('last_product_ids', 'len', '_wrap', 'append', '_products_from_ids', 'compare_payloads', 'set_last_products', 'write_audit_event', 'id', '_explain_comparison')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['comparison', 'return']
+nums: [2]
+names: ('dict', 'str')
+
+##### <module>._explain_comparison #####
+args: ('comparison',)
+locals: ('comparison', 'fallback', 'prompt')
+strs: ['summary', '\nWrite a short comparison (120-180 words) using ONLY this JSON.\nDo not invent review claims. Mention synthetic INR pricing.\nEnd with a clear recommendation and why.\n\nJSON: ', 'left', 'name', 'price', 'rating', 'review_count', 'pros', 'cons', 'right', 'reasons', 'recommended_name', '\n']
+nums: []
+names: ('gemini_available', 'json', 'dumps', 'get', 'generate_text')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['raw_message', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>._do_compare_best #####
+args: ('db', 'session', 'raw_message')
+locals: ('db', 'session', 'raw_message', 'ids', 'payloads', 'lasting_key', 'payloads_sorted', 'winner', 'note', 'best_reviews', 'message')
+strs: ['long', 'long-lasting', 'pros', 'Among the current picks, ', 'name', ' has the strongest long-wear evidence in the sampled stored reviews.', 'None of the current picks had strong long-wear keywords in sampled reviews. By overall score I would still pick ', '.', 'id', 'compare_best', ' has the strongest review volume among these picks (', 'review_count', ' stored reviews, catalog rating ', 'rating', ').']
+nums: [2]
+names: ('last_product_ids', 'len', '_do_search', 'parse_search_intent', '_products_from_ids', 'lower', 'sorted', 'get', 'set_last_products', '_wrap', 'max')
+
+##### <module>._do_compare_best.lasting_key #####
+args: ('item',)
+locals: ('item', 'pros')
+strs: ['pros', 'long-lasting', 'score']
+nums: []
+names: ('get',)
+
+##### <module>._do_compare_best.<lambda> #####
+args: ('item',)
+locals: ('item',)
+strs: ['review_count', 'rating']
+nums: []
+names: ('get',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['intent', 'return']
+nums: [2]
+names: ('ParsedIntent', 'int')
+
+##### <module>._resolve_product_id #####
+args: ('session', 'intent')
+locals: ('session', 'intent', 'ids')
+strs: []
+nums: []
+names: ('last_product_ids', 'use_recommended', 'recommended_product_id', 'product_index', 'len')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['intent', 'return']
+nums: [2]
+names: ('ParsedIntent', 'dict')
+
+##### <module>._do_add #####
+args: ('db', 'session', 'intent')
+locals: ('db', 'session', 'intent', 'product_id', 'cart', 'added', 'message')
+strs: ['Tell me what you want first, then I can add a specific pick to your cart.', 'added_product', 'cart_changed', 'Added ', 'name', ' to cart.', 'product_id', 'quantity', 'product_selected', 'Selected product ', '.', 'the product', ' to your cart. Subtotal is Γé╣', 'total', '.2f', ' (application-calculated, synthetic INR pricing).', 'add_to_cart']
+nums: []
+names: ('_resolve_product_id', '_wrap', 'add_to_cart', 'id', 'quantity', 'get', 'write_audit_event')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['intent', 'return']
+nums: [2]
+names: ('ParsedIntent', 'dict')
+
+##### <module>._do_remove #####
+args: ('db', 'session', 'intent')
+locals: ('db', 'session', 'intent', 'cart', 'index', 'item')
+strs: ['items', 'Your cart is already empty.', 'remove_from_cart', 'id', 'cart_changed', 'Removed ', 'name', ' from cart.', 'cart_item_id', ' from your cart.']
+nums: []
+names: ('get_cart', 'id', '_wrap', 'product_index', 'len', 'remove_from_cart', 'write_audit_event')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['message', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>._do_cart #####
+args: ('db', 'session', 'message')
+locals: ('db', 'session', 'message')
+strs: ['get_cart']
+nums: []
+names: ('_wrap',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._do_start_checkout #####
+args: ('db', 'session')
+locals: ('db', 'session', 'cart', 'order', 'names', 'message')
+strs: ['items', 'Your cart is empty, so I cannot start checkout.', 'checkout_started', 'Checkout started for Γé╣', '.2f', '. Waiting for explicit confirmation.', ', ', "You're about to place an order for ", ' totaling Γé╣', ' with ', '. This is DEMO/SYNTHETIC pricing. I will not charge anything until you explicitly confirm. Reply yes / confirm to proceed.', 'start_checkout']
+nums: []
+names: ('get_cart', 'id', '_wrap', 'snapshot_cart_into_order', 'active_order_id', 'commit', 'write_audit_event', 'float', 'total_amount', 'join', 'merchant', 'order_to_dict')
+
+##### <module>._do_start_checkout.<genexpr> #####
+args: ('.0',)
+locals: ('.0', 'item')
+strs: ['name', ' x', 'quantity']
+nums: []
+names: ()
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._do_confirm_checkout #####
+args: ('db', 'session')
+locals: ('db', 'session', 'order', 'cart')
+strs: ['PENDING_CONFIRMATION', 'items', 'CART', 'There is nothing waiting for confirmation. Add a product and say proceed to checkout first.', 'confirmation_received', 'User explicitly confirmed checkout.']
+nums: []
+names: ('get_active_order', 'id', 'status', 'get_cart', '_do_start_checkout', '_wrap', 'write_audit_event', '_create_razorpay_order')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._create_razorpay_order #####
+args: ('db', 'session', 'order')
+locals: ('db', 'session', 'order', 'created', 'exc', 'message')
+strs: ['PENDING_CONFIRMATION', 'Payment attempts are exhausted (', '/', '). No further charges will be attempted.', 'retry_blocked', 'gc-', 'session_id', 'order_id', 'razorpay_error', 'I could not create a Razorpay Test Mode order, so nothing was charged. ', ' You can retry or ask for a payment link if Test Mode supports it.', 'razorpay_unavailable', 'id', 'PAYMENT_PENDING', 'razorpay_order_created', 'Created Razorpay order ', ' for Γé╣', '.2f', '. Attempt ', '.', 'razorpay_order_id', 'amount_paise', 'amount', 'payment_attempt', 'Payment attempt ', ' started. Success is not claimed until Razorpay verification.', 'Razorpay Test Mode order ', ' is ready for Γé╣', '. Open the checkout widget to pay. I will not mark this paid until verification succeeds. If payment fails, I can retry (bounded) or create a payment link.', 'create_payment']
+nums: []
+names: ('can_retry', 'status', '_wrap', 'payment_attempts', 'max_attempts', 'order_to_dict', 'create_order', 'float', 'total_amount', 'id', 'str', 'RazorpayUnavailable', 'write_audit_event', 'ValueError', 'razorpay_order_id', 'transition', 'commit', 'refresh', 'get', '_payment_view')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._do_payment_failed #####
+args: ('db', 'session')
+locals: ('db', 'session', 'order', 'remaining', 'message')
+strs: ['There is no open payment to fail.', 'payment_failure', 'Payment reported as failed. No successful charge is being claimed.', 'PAYMENT_RECOVERY', 'recovery_attempt', 'Offered bounded recovery options after payment failure.', "Your payment didn't go through. Your order has not been charged successfully. You have ", ' recovery attempt(s) left: retry checkout, or generate a Razorpay payment link.', "Your payment didn't go through, and recovery attempts are exhausted. Nothing extra will be charged. You can start a new cart if you want to try later.", 'payment_failed', 'retry_payment', 'payment_link']
+nums: []
+names: ('get_active_order', 'id', '_wrap', 'mark_failed', 'write_audit_event', 'max_attempts', 'payment_attempts', 'transition', 'commit', 'HTTPException', 'refresh', 'max', 'order_to_dict', '_payment_view')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._do_retry #####
+args: ('db', 'session')
+locals: ('db', 'session', 'order')
+strs: ['There is no failed payment to retry.', 'Retry limit reached (', '). I will not create another charge attempt.', 'retry_blocked', 'recovery_attempt', 'User chose to retry payment.', 'PAYMENT_FAILED', 'PAYMENT_RECOVERY']
+nums: []
+names: ('get_active_order', 'id', '_wrap', 'can_retry', 'max_attempts', 'order_to_dict', 'write_audit_event', 'status', 'transition', 'commit', 'HTTPException', '_create_razorpay_order')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._do_payment_link #####
+args: ('db', 'session')
+locals: ('db', 'session', 'order', 'link', 'exc', 'url', 'message')
+strs: ['There is no order to attach a payment link to.', 'Retry limit reached, so I will not create another payment link.', 'retry_blocked', 'GlowCart demo order ', 'gc', 'a', 'payment_link_failed', 'I could not create a Razorpay payment link. ', ' Nothing was charged.', 'short_url', 'PAYMENT_FAILED', 'PAYMENT_RECOVERY', 'PENDING_CONFIRMATION', 'PAYMENT_PENDING', 'payment_link_created', 'Created Razorpay Test Mode payment link as a recovery option.', 'payment_link_id', 'id', 'Here is a Razorpay Test Mode payment link. It is a payment link, not a completed charge. Open it only if you want to continue: ', 'payment_link']
+nums: []
+names: ('get_active_order', 'id', '_wrap', 'can_retry', 'order_to_dict', 'create_payment_link', 'float', 'total_amount', 'payment_attempts', 'RazorpayUnavailable', 'write_audit_event', 'str', 'get', 'payment_link_url', 'status', 'transition', 'HTTPException', 'commit', 'refresh', '_payment_view')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._do_audit #####
+args: ('db', 'session')
+locals: ('db', 'session', 'events', 'message')
+strs: ['I logged ', ' audit events for this session. Open the Audit panel for the trail.', 'show_audit']
+nums: []
+names: ('list_audit_events', 'id', 'len', '_wrap')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('dict',)
+
+##### <module>._payment_view #####
+args: ('order',)
+locals: ('order',)
+strs: ['status', 'razorpay_order_id', 'razorpay_key_id', 'amount', 'amount_paise', 'currency', 'payment_link_url', 'attempts', 'max_attempts', 'paid', 'PAID']
+nums: []
+names: ('status', 'razorpay_order_id', 'public_key_id', 'float', 'total_amount', 'int', 'round', 'currency', 'payment_link_url', 'payment_attempts', 'max_attempts')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['message', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>._wrap #####
+args: ('db', 'session', 'message', 'products', 'cart', 'order', 'payment', 'comparison', 'actions', 'needs_confirmation', 'open_checkout', 'recovery_options')
+locals: ('db', 'session', 'message', 'products', 'cart', 'order', 'payment', 'comparison', 'actions', 'needs_confirmation', 'open_checkout', 'recovery_options', 'live_order')
+strs: ['message', 'products', 'cart', 'order', 'payment', 'comparison', 'audit', 'needs_confirmation', 'open_checkout', 'recovery_options', 'actions', 'recommended_product_id']
+nums: []
+names: ('get_active_order', 'id', 'get_cart', 'order_to_dict', '_payment_view', 'list_audit_events', 'recommended_product_id')
+
+========== backend/services/__pycache__/audit_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('json', 'datetime', 'models', 'AuditEvent', 'write_audit_event', 'list_audit_events')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['event_type', 'description', 'session_id', 'order_id', 'metadata', 'return']
+nums: [2]
+names: ('str', 'int', 'dict', 'AuditEvent')
+
+##### <module>.write_audit_event #####
+args: ('db', 'event_type', 'description', 'session_id', 'order_id', 'metadata')
+locals: ('db', 'event_type', 'description', 'session_id', 'order_id', 'metadata', 'safe_meta', 'secret_key', 'event')
+strs: ['key_secret']
+nums: []
+names: ('dict', 'pop', 'AuditEvent', 'json', 'dumps', 'str', 'datetime', 'utcnow', 'add', 'commit', 'refresh')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'limit', 'return']
+nums: [2]
+names: ('str', 'int', 'list', 'dict')
+
+##### <module>.list_audit_events #####
+args: ('db', 'session_id', 'limit')
+locals: ('db', 'session_id', 'limit', 'events', 'event')
+strs: ['id', 'session_id', 'order_id', 'event_type', 'description', 'metadata', '{}', 'created_at', 'Z']
+nums: []
+names: ('query', 'AuditEvent', 'filter', 'session_id', 'order_by', 'created_at', 'desc', 'limit', 'all', 'id', 'order_id', 'event_type', 'description', 'json', 'loads', 'metadata_json', 'isoformat')
+
+========== backend/services/__pycache__/cart_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('fastapi', 'HTTPException', 'models', 'CartItem', 'Product', 'services.serializers', 'product_to_dict', '_line_dict', 'get_cart', 'add_to_cart', 'update_cart_item', 'remove_from_cart')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['item', 'product', 'return']
+nums: [2]
+names: ('CartItem', 'Product', 'dict')
+
+##### <module>._line_dict #####
+args: ('item', 'product')
+locals: ('item', 'product', 'qty', 'unit')
+strs: ['id', 'product_id', 'name', 'brand', 'image_url', 'quantity', 'unit_price', 'line_total', 'currency', 'inventory', 'available', 'merchant']
+nums: []
+names: ('int', 'quantity', 'float', 'unit_price', 'id', 'name', 'brand', 'image_url', 'round', 'currency', 'inventory', 'available', 'merchant')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'return']
+nums: [2]
+names: ('str', 'dict')
+
+##### <module>.get_cart #####
+args: ('db', 'session_id')
+locals: ('db', 'session_id', 'items', 'lines', 'subtotal', 'merchant', 'item', 'product', 'line')
+strs: ['GlowCart', 'line_total', 'session_id', 'items', 'item_count', 'subtotal', 'total', 'currency', 'INR', 'merchant', 'pricing_note', 'Totals use DEMO/SYNTHETIC merchant INR prices. No tax added.']
+nums: [0.0]
+names: ('query', 'CartItem', 'filter', 'session_id', 'order_by', 'id', 'asc', 'all', 'get', 'Product', 'product_id', '_line_dict', 'append', 'merchant', 'round', 'sum')
+
+##### <module>.get_cart.<genexpr> #####
+args: ('.0',)
+locals: ('.0', 'line')
+strs: ['quantity']
+nums: []
+names: ()
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'product_id', 'quantity', 'return']
+nums: [2]
+names: ('str', 'int', 'dict')
+
+##### <module>.add_to_cart #####
+args: ('db', 'session_id', 'product_id', 'quantity')
+locals: ('db', 'session_id', 'product_id', 'quantity', 'product', 'existing', 'new_qty', 'cart')
+strs: ['Quantity must be at least 1.', 'Product not found.', 'This product is currently unavailable.', 'Only ', ' units are in stock.', 'added_product']
+nums: [1, 400, 404, 409]
+names: ('HTTPException', 'get', 'Product', 'available', 'inventory', 'query', 'CartItem', 'filter', 'session_id', 'product_id', 'first', 'quantity', 'price', 'unit_price', 'add', 'commit', 'get_cart', 'product_to_dict')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'item_id', 'quantity', 'return']
+nums: [2]
+names: ('str', 'int', 'dict')
+
+##### <module>.update_cart_item #####
+args: ('db', 'session_id', 'item_id', 'quantity')
+locals: ('db', 'session_id', 'item_id', 'quantity', 'item', 'product')
+strs: ['Cart item not found.', 'Product not found.', 'Only ', ' units are in stock.']
+nums: [404, 409]
+names: ('get', 'CartItem', 'session_id', 'HTTPException', 'delete', 'commit', 'get_cart', 'Product', 'product_id', 'inventory', 'quantity', 'price', 'unit_price')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'item_id', 'return']
+nums: [2]
+names: ('str', 'int', 'dict')
+
+##### <module>.remove_from_cart #####
+args: ('db', 'session_id', 'item_id')
+locals: ('db', 'session_id', 'item_id')
+strs: []
+nums: [0]
+names: ('update_cart_item',)
+
+========== backend/services/__pycache__/catalog_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('sqlalchemy', 'select', 'models', 'Product', 'services.recommend_service', 'rank_products', 'services.review_service', 'retrieve_review_evidence', 'services.serializers', 'product_to_dict', 'review_to_dict', 'search_catalog', 'get_product_or_none', 'get_product_with_evidence', 'list_reviews')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['query', 'max_price', 'min_rating', 'brand', 'limit', 'ranked', 'return']
+nums: [2]
+names: ('str', 'float', 'int', 'bool', 'dict')
+
+##### <module>.search_catalog #####
+args: ('db', 'query', 'max_price', 'min_rating', 'brand', 'limit', 'ranked')
+locals: ('db', 'query', 'max_price', 'min_rating', 'brand', 'limit', 'ranked', 'statement', 'term', 'products', 'constraints', 'payload', 'product')
+strs: ['%', 'query', 'max_price', 'min_rating', 'brand', 'count', 'products', 'constraints']
+nums: []
+names: ('select', 'Product', 'where', 'available', 'is_', 'inventory', 'lower', 'name', 'ilike', 'brand', 'description', 'category', 'price', 'rating', 'execute', 'limit', 'scalars', 'all', 'rank_products', 'product_to_dict', 'len')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['product_id', 'return']
+nums: [2]
+names: ('int', 'Product')
+
+##### <module>.get_product_or_none #####
+args: ('db', 'product_id')
+locals: ('db', 'product_id')
+strs: []
+nums: []
+names: ('get', 'Product')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['product_id', 'return']
+nums: [2]
+names: ('int', 'dict')
+
+##### <module>.get_product_with_evidence #####
+args: ('db', 'product_id')
+locals: ('db', 'product_id', 'product', 'payload', 'item')
+strs: ['review_evidence', 'pros', 'label', 'cons']
+nums: []
+names: ('get_product_or_none', 'product_to_dict', 'retrieve_review_evidence')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['product_id', 'limit', 'return']
+nums: [2]
+names: ('int', 'dict')
+
+##### <module>.list_reviews #####
+args: ('db', 'product_id', 'limit')
+locals: ('db', 'product_id', 'limit', 'product', 'Review', 'statement', 'reviews', 'review')
+strs: ['product_id', 'product_name', 'reviews']
+nums: []
+names: ('get_product_or_none', 'models', 'Review', 'select', 'where', 'asin', 'order_by', 'id', 'desc', 'limit', 'execute', 'scalars', 'all', 'name', 'review_to_dict')
+
+========== backend/services/__pycache__/order_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: ['CART', 'PENDING_CONFIRMATION', 'CANCELLED', 'PAYMENT_PENDING', 'PAYMENT_FAILED', 'PAID', 'PAYMENT_RECOVERY']
+nums: [0]
+names: ('json', 'datetime', 'fastapi', 'HTTPException', 'config', 'MAX_PAYMENT_ATTEMPTS', 'models', 'Order', 'services.cart_service', 'get_cart', 'set', 'ALLOWED_TRANSITIONS', 'order_to_dict', 'get_active_order', 'transition', 'snapshot_cart_into_order', 'mark_paid', 'mark_failed', 'can_retry')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order', 'return']
+nums: [2]
+names: ('Order', 'dict')
+
+##### <module>.order_to_dict #####
+args: ('order',)
+locals: ('order',)
+strs: ['id', 'session_id', 'status', 'total_amount', 'amount_paise', 'currency', 'merchant', 'items', '[]', 'razorpay_order_id', 'razorpay_payment_id', 'payment_link_url', 'payment_attempts', 'max_attempts', 'attempts_remaining', 'created_at', 'Z']
+nums: []
+names: ('id', 'session_id', 'status', 'float', 'total_amount', 'int', 'round', 'currency', 'merchant', 'json', 'loads', 'items_snapshot', 'razorpay_order_id', 'razorpay_payment_id', 'payment_link_url', 'payment_attempts', 'max_attempts', 'max', 'created_at', 'isoformat')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'return']
+nums: [2]
+names: ('str', 'Order')
+
+##### <module>.get_active_order #####
+args: ('db', 'session_id')
+locals: ('db', 'session_id')
+strs: ['PAID', 'CANCELLED']
+nums: []
+names: ('query', 'Order', 'filter', 'session_id', 'status', 'notin_', 'order_by', 'id', 'desc', 'first')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order', 'new_status', 'return']
+nums: [2]
+names: ('Order', 'str')
+
+##### <module>.transition #####
+args: ('order', 'new_status')
+locals: ('order', 'new_status', 'allowed')
+strs: ['Cannot move order from ', ' to ', '.']
+nums: [409]
+names: ('ALLOWED_TRANSITIONS', 'get', 'status', 'set', 'HTTPException', 'datetime', 'utcnow', 'updated_at')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'return']
+nums: [2]
+names: ('str', 'Order')
+
+##### <module>.snapshot_cart_into_order #####
+args: ('db', 'session_id')
+locals: ('db', 'session_id', 'cart', 'order', 'payload', 'total', 'merchant')
+strs: ['items', 'Your cart is empty.', 'total', 'merchant', 'CART', 'PENDING_CONFIRMATION', 'PAYMENT_PENDING', 'INR']
+nums: [400]
+names: ('get_cart', 'HTTPException', 'get_active_order', 'status', 'json', 'dumps', 'items_snapshot', 'total_amount', 'merchant', 'transition', 'datetime', 'utcnow', 'updated_at', 'commit', 'refresh', 'Order', 'MAX_PAYMENT_ATTEMPTS', 'add')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order', 'payment_id', 'return']
+nums: [2]
+names: ('Order', 'str')
+
+##### <module>.mark_paid #####
+args: ('db', 'order', 'payment_id')
+locals: ('db', 'order', 'payment_id')
+strs: ['PAID']
+nums: []
+names: ('status', 'transition', 'razorpay_payment_id', 'commit', 'refresh')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order', 'return']
+nums: [2]
+names: ('Order',)
+
+##### <module>.mark_failed #####
+args: ('db', 'order')
+locals: ('db', 'order')
+strs: ['PAID', 'This order is already paid.', 'PAYMENT_FAILED']
+nums: [409]
+names: ('status', 'HTTPException', 'ALLOWED_TRANSITIONS', 'get', 'set', 'transition', 'datetime', 'utcnow', 'updated_at', 'commit', 'refresh')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order', 'return']
+nums: [2]
+names: ('Order', 'bool')
+
+##### <module>.can_retry #####
+args: ('order',)
+locals: ('order',)
+strs: ['PAID']
+nums: []
+names: ('payment_attempts', 'max_attempts', 'status')
+
+========== backend/services/__pycache__/razorpay_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: ['RazorpayUnavailable']
+nums: [0]
+names: ('logging', 'config', 'RAZORPAY_KEY_ID', 'RAZORPAY_KEY_SECRET', 'getLogger', '__name__', 'logger', 'Exception', 'RazorpayUnavailable', '_client', 'public_key_id', 'amount_to_paise', 'create_order', 'verify_signature', 'create_payment_link')
+
+##### <module>.RazorpayUnavailable #####
+args: ()
+locals: ()
+strs: ['RazorpayUnavailable']
+nums: []
+names: ('__name__', '__module__', '__qualname__', '__firstlineno__', '__static_attributes__')
+
+##### <module>._client #####
+args: ()
+locals: ('razorpay', 'exc')
+strs: ['Razorpay Test Mode is not configured. Set RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET.', 'Razorpay SDK is not installed.']
+nums: []
+names: ('RAZORPAY_KEY_ID', 'RAZORPAY_KEY_SECRET', 'RazorpayUnavailable', 'razorpay', 'ImportError', 'Client')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['return']
+nums: [2]
+names: ('str',)
+
+##### <module>.public_key_id #####
+args: ()
+locals: ()
+strs: []
+nums: []
+names: ('RAZORPAY_KEY_ID',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['amount_inr', 'return']
+nums: [2]
+names: ('float', 'int')
+
+##### <module>.amount_to_paise #####
+args: ('amount_inr',)
+locals: ('amount_inr',)
+strs: []
+nums: [100]
+names: ('int', 'round', 'float')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['amount_inr', 'receipt', 'notes', 'return']
+nums: [2]
+names: ('float', 'str', 'dict')
+
+##### <module>.create_order #####
+args: ('amount_inr', 'receipt', 'notes')
+locals: ('amount_inr', 'receipt', 'notes', 'paise', 'client', 'payload', 'created', 'exc')
+strs: ['Amount must be at least Γé╣1.00 for Razorpay.', 'amount', 'currency', 'INR', 'receipt', 'payment_capture', 'notes', 'Razorpay order create failed', 'Razorpay could not create an order: ', 'id', 'status']
+nums: [100]
+names: ('amount_to_paise', 'ValueError', '_client', 'order', 'create', 'Exception', 'logger', 'exception', 'RazorpayUnavailable', 'get')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order_id', 'payment_id', 'signature', 'return']
+nums: [2]
+names: ('str', 'bool')
+
+##### <module>.verify_signature #####
+args: ('order_id', 'payment_id', 'signature')
+locals: ('order_id', 'payment_id', 'signature', 'client')
+strs: ['razorpay_order_id', 'razorpay_payment_id', 'razorpay_signature', 'Razorpay signature verification failed']
+nums: []
+names: ('_client', 'utility', 'verify_payment_signature', 'Exception', 'logger', 'exception')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['amount_inr', 'description', 'reference', 'return']
+nums: [2]
+names: ('float', 'str', 'dict')
+
+##### <module>.create_payment_link #####
+args: ('amount_inr', 'description', 'reference')
+locals: ('amount_inr', 'description', 'reference', 'paise', 'client', 'payload', 'created', 'exc')
+strs: ['amount', 'currency', 'INR', 'accept_partial', 'description', 'reference_id', 'notify', 'sms', 'email', 'reminder_enable', 'notes', 'demo', 'true', 'source', 'glowcart-agent', 'Razorpay payment link create failed', 'Razorpay could not create a payment link. Test Mode may not support this request.', 'id', 'short_url', 'status']
+nums: []
+names: ('amount_to_paise', '_client', 'payment_link', 'create', 'Exception', 'logger', 'exception', 'RazorpayUnavailable', 'get')
+
+========== backend/services/__pycache__/recommend_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('math', 'services.review_service', 'retrieve_review_evidence', 'services.serializers', 'product_to_dict', 'bayesian_rating', 'price_fit_score', 'volume_score', 'score_product', 'rank_products', '_deterministic_why', 'compare_payloads')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['rating', 'review_count', 'prior', 'prior_weight', 'return']
+nums: [2]
+names: ('float', 'int')
+
+##### <module>.bayesian_rating #####
+args: ('rating', 'review_count', 'prior', 'prior_weight')
+locals: ('rating', 'review_count', 'prior', 'prior_weight', 'observed', 'count')
+strs: []
+nums: []
+names: ('float', 'max', 'int')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['price', 'max_price', 'return']
+nums: [2]
+names: ('float',)
+
+##### <module>.price_fit_score #####
+args: ('price', 'max_price')
+locals: ('price', 'max_price', 'room')
+strs: []
+nums: [0.7, 0.0, 1.0, 0.55, 0.45]
+names: ()
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['review_count', 'return']
+nums: [2]
+names: ('int', 'float')
+
+##### <module>.volume_score #####
+args: ('review_count',)
+locals: ('review_count',)
+strs: []
+nums: [1.0, 400]
+names: ('min', 'math', 'log1p')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['constraints', 'evidence', 'return']
+nums: [2]
+names: ('dict',)
+
+##### <module>.score_product #####
+args: ('product', 'constraints', 'evidence')
+locals: ('product', 'constraints', 'evidence', 'rating', 'count', 'price', 'max_price', 'min_rating', 'bayes', 'volume', 'price_fit', 'evidence_score', 'available', 'rating_gate', 'total', 'factors')
+strs: ['max_price', 'min_rating', 'evidence_score', 'bayesian_rating', 'catalog_rating', 'review_count', 'review_volume_score', 'price', 'price_fit', 'availability', 'inventory', 'score', 'factors']
+nums: [0.5, 1.0, 0.0, 0.2, 0.38, 5.0, 0.24, 0.16, 0.12, 0.1]
+names: ('rating', 'float', 'int', 'review_count', 'price', 'get', 'bayesian_rating', 'volume_score', 'price_fit_score', 'available', 'inventory', 'round')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['products', 'constraints', 'with_evidence', 'limit', 'return']
+nums: [2]
+names: ('list', 'dict', 'bool', 'int')
+
+##### <module>.rank_products #####
+args: ('db', 'products', 'constraints', 'with_evidence', 'limit')
+locals: ('db', 'products', 'constraints', 'with_evidence', 'limit', 'ranked', 'product', 'evidence', 'scored', 'payload', 'item')
+strs: ['evidence_score', 'pros', 'cons', 'samples', 'score', 'factors', 'score_factors', 'label', 'review_evidence', 'why']
+nums: [0.5]
+names: ('retrieve_review_evidence', 'score_product', 'product_to_dict', 'get', '_deterministic_why', 'append', 'sort')
+
+##### <module>.rank_products.<lambda> #####
+args: ('item',)
+locals: ('item',)
+strs: ['score']
+nums: []
+names: ()
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'constraints', 'return']
+nums: [2]
+names: ('dict', 'str')
+
+##### <module>._deterministic_why #####
+args: ('payload', 'constraints')
+locals: ('payload', 'constraints', 'parts', 'rating', 'count', 'price', 'max_price')
+strs: ['rating', 'review_count', 'price', 'catalog rating ', '.1f', ' from ', ' reviews', ' stored reviews', 'max_price', 'priced at Γé╣', '.0f', ' within your Γé╣', ' budget', ' (synthetic demo pricing)', 'pros', 'review text supports: ', ', ', 'cons', 'watch-outs in reviews: ', '; ']
+nums: []
+names: ('get', 'append', 'join')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['left', 'right', 'constraints', 'return']
+nums: [2]
+names: ('dict',)
+
+##### <module>.compare_payloads #####
+args: ('left', 'right', 'constraints')
+locals: ('left', 'right', 'constraints', 'winner', 'loser', 'reasons', 'stronger', 'left_rating', 'right_rating', 'higher', 'cheaper')
+strs: ['score', 'review_count', 'name', ' has more stored reviews (', ' vs ', ').', 'rating', ' has a slightly higher catalog rating (', 'price', ' is cheaper at Γé╣', '.0f', ' vs Γé╣', '.', 'Recommendation score favors ', ' (', ') using rating, review volume, price fit, availability, and sampled review evidence.', 'left', 'right', 'recommended_id', 'id', 'recommended_name', 'reasons', 'summary', ' ', 'constraints']
+nums: [0.05]
+names: ('get', 'append', 'abs', 'join')
+
+========== backend/services/__pycache__/review_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: ['long-lasting', 'comfortable', 'good color', 'easy application', 'moisturizing', 'drying', 'poor packaging', 'color mismatch', 'transfer issues', 'fades quickly']
+nums: [0]
+names: ('re', 'sqlalchemy', 'select', 'models', 'Product', 'Review', 'PRO_PATTERNS', 'CON_PATTERNS', '_match_themes', 'retrieve_review_evidence', 'evidence_labels')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['text', 'patterns', 'return']
+nums: [2]
+names: ('str', 'list', 'tuple')
+
+##### <module>._match_themes #####
+args: ('text', 'patterns')
+locals: ('text', 'patterns', 'matched', 'label', 'regexes')
+strs: []
+nums: []
+names: ('lower', 'any', 'append')
+
+##### <module>._match_themes.<genexpr> #####
+args: ('.0',)
+locals: ('.0', 'rx')
+strs: []
+nums: []
+names: ('re', 'search')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['product', 'limit', 'return']
+nums: [2]
+names: ('Product', 'int', 'dict')
+
+##### <module>.retrieve_review_evidence #####
+args: ('db', 'product', 'limit')
+locals: ('db', 'product', 'limit', 'statement', 'high', 'low_statement', 'low', 'review', 'by_id', 'reviews', 'pro_counts', 'con_counts', 'pro_excerpts', 'con_excerpts', 'samples', 'text', 'excerpt', 'label', 'count', 'pros', 'cons', 'evidence_score', 'pro_total', 'con_total')
+strs: ['', 'rating', 'text', 'label', 'mentions', 'excerpts', 'pros', 'cons', 'samples', 'evidence_score', 'reviews_examined']
+nums: [4, 0.5]
+names: ('select', 'Review', 'where', 'asin', 'order_by', 'rating', 'desc', 'id', 'limit', 'execute', 'scalars', 'all', 'asc', 'max', 'list', 'values', 'review_text', 'strip', 'append', 'float', '_match_themes', 'PRO_PATTERNS', 'get', 'setdefault', 'len', 'CON_PATTERNS', 'sorted', 'items', 'sum', 'round')
+
+##### <module>.retrieve_review_evidence.<lambda> #####
+args: ('item',)
+locals: ('item',)
+strs: []
+nums: [1]
+names: ()
+
+##### <module>.retrieve_review_evidence.<lambda> #####
+args: ('item',)
+locals: ('item',)
+strs: []
+nums: [1]
+names: ()
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['evidence', 'return']
+nums: [2]
+names: ('dict', 'tuple', 'list', 'str')
+
+##### <module>.evidence_labels #####
+args: ('evidence',)
+locals: ('evidence', 'item', 'pros', 'cons')
+strs: ['pros', 'label', 'cons']
+nums: []
+names: ('get',)
+
+========== backend/services/__pycache__/serializers.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('models', 'Product', 'Review', 'product_to_dict', 'review_to_dict')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['product', 'return']
+nums: [2]
+names: ('Product', 'dict')
+
+##### <module>.product_to_dict #####
+args: ('product',)
+locals: ('product',)
+strs: ['id', 'asin', 'name', 'brand', 'category', 'description', 'price', 'currency', 'rating', 'review_count', 'image_url', 'inventory', 'available', 'merchant', 'pricing_note', 'DEMO/SYNTHETIC merchant pricing in INR']
+nums: []
+names: ('id', 'asin', 'name', 'brand', 'category', 'description', 'float', 'price', 'currency', 'rating', 'review_count', 'image_url', 'inventory', 'available', 'merchant')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['review', 'return']
+nums: [2]
+names: ('Review', 'dict')
+
+##### <module>.review_to_dict #####
+args: ('review',)
+locals: ('review',)
+strs: ['rating', 'text']
+nums: []
+names: ('float', 'rating', 'review_text')
+
+========== backend/services/__pycache__/session_service.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: []
+nums: [0]
+names: ('json', 'uuid', 'datetime', 'models', 'ShoppingSession', 'get_or_create_session', 'conversation', 'last_product_ids', 'append_message', 'set_last_products')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'return']
+nums: [2]
+names: ('str', 'ShoppingSession')
+
+##### <module>.get_or_create_session #####
+args: ('db', 'session_id')
+locals: ('db', 'session_id', 'sid', 'session')
+strs: ['', '[]']
+nums: []
+names: ('strip', 'str', 'uuid', 'uuid4', 'get', 'ShoppingSession', 'datetime', 'utcnow', 'add', 'commit', 'refresh')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session', 'return']
+nums: [2]
+names: ('ShoppingSession', 'list', 'dict')
+
+##### <module>.conversation #####
+args: ('session',)
+locals: ('session',)
+strs: ['[]']
+nums: []
+names: ('json', 'loads', 'conversation', 'JSONDecodeError')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session', 'return']
+nums: [2]
+names: ('ShoppingSession', 'list', 'int')
+
+##### <module>.last_product_ids #####
+args: ('session',)
+locals: ('session', 'item')
+strs: ['[]']
+nums: []
+names: ('json', 'loads', 'last_product_ids', 'int', 'JSONDecodeError', 'TypeError', 'ValueError')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session', 'role', 'content', 'return']
+nums: [2]
+names: ('ShoppingSession', 'str')
+
+##### <module>.append_message #####
+args: ('db', 'session', 'role', 'content')
+locals: ('db', 'session', 'role', 'content', 'history')
+strs: ['role', 'content']
+nums: [-24]
+names: ('conversation', 'append', 'json', 'dumps', 'datetime', 'utcnow', 'updated_at', 'commit')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session', 'product_ids', 'recommended_id', 'return']
+nums: [2]
+names: ('ShoppingSession', 'list', 'int')
+
+##### <module>.set_last_products #####
+args: ('db', 'session', 'product_ids', 'recommended_id')
+locals: ('db', 'session', 'product_ids', 'recommended_id')
+strs: []
+nums: []
+names: ('json', 'dumps', 'last_product_ids', 'recommended_product_id', 'datetime', 'utcnow', 'updated_at', 'commit')
+
+========== backend/routers/__pycache__/commerce.cpython-314.pyc ==========
+
+##### <module> #####
+args: ()
+locals: ()
+strs: ['Commerce', '/payments/config', '/cart', '/cart/{item_id}', '/checkout/confirm', '/payments/create-order', '/payments/verify', '/payments/simulate-failure', '/payments/retry', '/payments/payment-link', '/payments/report-failure', '/orders/{order_id}', '/audit/{session_id}']
+nums: [0]
+names: ('fastapi', 'APIRouter', 'Depends', 'HTTPException', 'sqlalchemy.orm', 'Session', 'deps', 'get_db', 'schemas', 'CartAddRequest', 'CartUpdateRequest', 'CheckoutConfirmRequest', 'PaymentActionRequest', 'PaymentVerifyRequest', 'SessionRequest', 'services.audit_service', 'list_audit_events', 'write_audit_event', 'services.cart_service', 'add_to_cart', 'get_cart', 'remove_from_cart', 'update_cart_item', 'services.order_service', 'can_retry', 'get_active_order', 'mark_failed', 'mark_paid', 'order_to_dict', 'snapshot_cart_into_order', 'transition', 'services.razorpay_service', 'RazorpayUnavailable', 'create_order', 'create_payment_link', 'public_key_id', 'verify_signature', 'services.session_service', 'get_or_create_session', 'router', 'get', 'payment_config', 'read_cart', 'post', 'post_cart', 'patch', 'patch_cart', 'delete', 'delete_cart_item', 'confirm_checkout', 'payments_create_order', 'payments_verify', 'simulate_failure', 'payments_retry', 'payments_link', 'report_failure', 'get_order', 'get_audit', '_open_razorpay')
+
+##### <module>.payment_config #####
+args: ()
+locals: ()
+strs: ['key_id', 'mode', 'test', 'note', 'Only Razorpay Test Mode key_id is exposed. The secret stays on the server.']
+nums: []
+names: ('public_key_id',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'db']
+nums: [2]
+names: ('str', 'Session')
+
+##### <module>.read_cart #####
+args: ('session_id', 'db')
+locals: ('session_id', 'db')
+strs: []
+nums: []
+names: ('get_or_create_session', 'get_cart')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('CartAddRequest', 'Session')
+
+##### <module>.post_cart #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'cart')
+strs: ['cart_changed', 'Cart add via API for product ', '.', 'product_id', 'quantity']
+nums: []
+names: ('get_or_create_session', 'session_id', 'add_to_cart', 'product_id', 'quantity', 'write_audit_event')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['item_id', 'payload', 'db']
+nums: [2]
+names: ('int', 'CartUpdateRequest', 'Session')
+
+##### <module>.patch_cart #####
+args: ('item_id', 'payload', 'db')
+locals: ('item_id', 'payload', 'db', 'cart')
+strs: ['cart_changed', 'Cart quantity updated for item ', ' to ', '.']
+nums: []
+names: ('update_cart_item', 'session_id', 'quantity', 'write_audit_event')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['item_id', 'session_id', 'db']
+nums: [2]
+names: ('int', 'str', 'Session')
+
+##### <module>.delete_cart_item #####
+args: ('item_id', 'session_id', 'db')
+locals: ('item_id', 'session_id', 'db', 'cart')
+strs: ['cart_changed', 'Removed cart item ', '.']
+nums: []
+names: ('remove_from_cart', 'write_audit_event')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('CheckoutConfirmRequest', 'Session')
+
+##### <module>.confirm_checkout #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'session', 'order')
+strs: ['message', 'Checkout was not confirmed.', 'order', 'confirmation_received', 'Checkout confirmed via API.']
+nums: []
+names: ('get_or_create_session', 'session_id', 'confirm', 'snapshot_cart_into_order', 'id', 'write_audit_event', '_open_razorpay')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('SessionRequest', 'Session')
+
+##### <module>.payments_create_order #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'session', 'order')
+strs: ['CART', 'PENDING_CONFIRMATION']
+nums: []
+names: ('get_or_create_session', 'session_id', 'get_active_order', 'id', 'snapshot_cart_into_order', 'status', 'transition', 'commit', '_open_razorpay')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('PaymentVerifyRequest', 'Session')
+
+##### <module>.payments_verify #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'order', 'ok', 'exc')
+strs: ['No matching Razorpay order for this session.', 'payment_failure', 'Razorpay signature verification failed. Payment is not marked successful.', 'Payment could not be verified. No successful charge is claimed.', 'payment_success', 'Verified Razorpay payment ', '.', 'razorpay_order_id', 'message', 'Payment verified. The order is marked paid only after Razorpay signature checks.', 'order']
+nums: [400, 503]
+names: ('get_active_order', 'session_id', 'razorpay_order_id', 'HTTPException', 'verify_signature', 'razorpay_payment_id', 'razorpay_signature', 'RazorpayUnavailable', 'str', 'write_audit_event', 'id', 'mark_paid', 'order_to_dict')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('PaymentActionRequest', 'Session')
+
+##### <module>.simulate_failure #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'order', 'remaining')
+strs: ['No open order to fail.', 'PAYMENT_RECOVERY', 'payment_failure', 'Simulated payment failure for demo. No successful charge is claimed.', 'recovery_attempt', 'Offered bounded recovery after simulated failure.', 'message', "Your payment didn't go through. Your order has not been charged successfully. Recovery attempts remaining: ", '.', 'order', 'recovery_options', 'retry_payment', 'payment_link']
+nums: [404]
+names: ('get_active_order', 'session_id', 'HTTPException', 'mark_failed', 'max_attempts', 'payment_attempts', 'transition', 'commit', 'write_audit_event', 'id', 'refresh', 'max', 'order_to_dict')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('PaymentActionRequest', 'Session')
+
+##### <module>.payments_retry #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'order')
+strs: ['No open order to retry.', 'Retry limit reached (', '). No further charge attempts will be made.', 'recovery_attempt', 'Payment retry requested.']
+nums: [404, 409]
+names: ('get_active_order', 'session_id', 'HTTPException', 'can_retry', 'max_attempts', 'write_audit_event', 'id', '_open_razorpay')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('PaymentActionRequest', 'Session')
+
+##### <module>.payments_link #####
+args: ('payload', 'db')
+locals: ('payload', 'db', 'order', 'link', 'exc')
+strs: ['No open order for a payment link.', 'Retry limit reached. No payment link will be created.', 'GlowCart demo order ', 'gc', 'l', 'payment_link_failed', 'short_url', 'PAYMENT_FAILED', 'PAYMENT_RECOVERY', 'payment_link_created', 'Payment link created via API.', 'payment_link_id', 'id', 'message', 'Razorpay Test Mode payment link created. This is not a completed charge.', 'payment_link_url', 'order']
+nums: [404, 409, 503]
+names: ('get_active_order', 'session_id', 'HTTPException', 'can_retry', 'create_payment_link', 'float', 'total_amount', 'id', 'payment_attempts', 'RazorpayUnavailable', 'write_audit_event', 'str', 'get', 'payment_link_url', 'status', 'transition', 'commit', 'refresh', 'order_to_dict')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['payload', 'db']
+nums: [2]
+names: ('PaymentActionRequest', 'Session')
+
+##### <module>.report_failure #####
+args: ('payload', 'db')
+locals: ('payload', 'db')
+strs: []
+nums: []
+names: ('simulate_failure',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['order_id', 'db']
+nums: [2]
+names: ('int', 'Session')
+
+##### <module>.get_order #####
+args: ('order_id', 'db')
+locals: ('order_id', 'db', 'Order', 'order')
+strs: ['Order not found.']
+nums: [0, 404]
+names: ('models', 'Order', 'get', 'HTTPException', 'order_to_dict')
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id', 'db']
+nums: [2]
+names: ('str', 'Session')
+
+##### <module>.get_audit #####
+args: ('session_id', 'db')
+locals: ('session_id', 'db')
+strs: ['session_id', 'events']
+nums: []
+names: ('list_audit_events',)
+
+##### <module>.__annotate__ #####
+args: ('format',)
+locals: ('format',)
+strs: ['session_id']
+nums: [2]
+names: ('str',)
+
+##### <module>._open_razorpay #####
+args: ('db', 'session_id', 'order')
+locals: ('db', 'session_id', 'order', 'created', 'exc')
+strs: ['PENDING_CONFIRMATION', 'Retry limit reached. No further Razorpay orders will be created.', 'gc-', 'session_id', 'order_id', 'razorpay_error', 'id', 'PAYMENT_PENDING', 'razorpay_order_created', 'Created Razorpay order ', '.', 'razorpay_order_id', 'amount_paise', 'amount', 'payment_attempt', 'Payment attempt ', '/', 'message', 'Razorpay Test Mode order created. Payment is pending verification.', 'order', 'payment', 'status', 'razorpay_key_id', 'currency', 'open_checkout']
+nums: [409, 503, 400]
+names: ('can_retry', 'status', 'HTTPException', 'create_order', 'float', 'total_amount', 'id', 'str', 'RazorpayUnavailable', 'write_audit_event', 'ValueError', 'razorpay_order_id', 'payment_attempts', 'transition', 'commit', 'refresh', 'get', 'max_attempts', 'order_to_dict', 'public_key_id', 'int', 'round', 'currency')

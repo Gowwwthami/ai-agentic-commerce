@@ -1,5 +1,12 @@
 from database import engine, Base
-from models import Product
+from models import (  # noqa: F401 — register metadata
+    Product,
+    Review,
+    ShoppingSession,
+    CartItem,
+    Order,
+    AuditEvent,
+)
 
 print("Creating database tables...")
 
